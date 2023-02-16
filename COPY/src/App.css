@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800;900&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: "Poppins", sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  --font: "Poppins", sans-serif;
+  --width: 300px;
+  --height: 40px;
+  --back: #f2f2f2;
+  -color: #7700ff;
+}
+
+html {
+  min-height: 100vh;
+  background-color: var(--back);
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5rem;
+}
+
+.app {
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+}
+
+.overflow {
+  position: absolute;
+  background-color: var(--back);
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+  opacity: 0.5;
+}
+
+.message {
+  position: absolute;
+  background-color: blue;
+  width: 100%;
+  height: max-content;
+  top: calc(-80px - 27px);
+  text-align: center;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  animation: moveIn 500ms 500ms forwards ease-out;
+}
+
+.firebase-error {
+  color: rgb(255, 255, 255);
+  font-family: var(--font);
+  background-color: red;
+  font-size: 16px;
+  font-weight: 600;
+  max-width: var(--width);
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  padding-inline: 10px;
+  text-align: center;
+  border: 1px solid red;
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: 21px 1fr;
+  justify-content: center;
+  align-items: center;
+}
+
+.firebase-error > span {
+  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.firebase-success {
+  color: rgb(255, 255, 255);
+  font-family: var(--font);
+  background-color: blue;
+  font-size: 16px;
+  font-weight: 600;
+  max-width: var(--width);
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  padding-inline: 10px;
+  text-align: center;
+  border: 1px solid blue;
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: 16px 1fr;
+  justify-content: center;
+  align-items: center;
+}
+
+.firebase-success > span {
+  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: jump-shaking 1s ease-out infinite;
+}
+
+@keyframes moveIn {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(27px);
+  }
+}
+
+@keyframes jump-shaking {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateY(-1px);
+  }
+  35% {
+    transform: translateY(-1px) rotate(17deg);
+  }
+  55% {
+    transform: translateY(-1px) rotate(-17deg);
+  }
+  65% {
+    transform: translateY(-1px) rotate(17deg);
+  }
+  70% {
+    transform: translateY(-1px) rotate(-17deg);
+  }
+  75% {
+    transform: translateY(0) rotate(0);
+  }
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+}
