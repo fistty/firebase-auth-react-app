@@ -9,7 +9,7 @@ import { validateCredentials } from "../helpers/ValidateCredentials.js";
 import * as ROUTES from "../routes/routes";
 import "./SignUp.css";
 
-export function SignUp({ setMessage }) {
+export function SignUp({ setMessage, setShowEmail }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
@@ -70,8 +70,10 @@ export function SignUp({ setMessage }) {
         throw new Error("ERROR at DATABASE");
       });
       console.log("USER SUCCESFULLY CREATED");
-      navigate(ROUTES.SIGN_IN);
       setMessage(true);
+      setShowEmail(user.email);
+      navigate(ROUTES.SIGN_IN);
+      setLoading(false);
     } catch (error) {
       console.log({ error });
       setFirebaseError(error.code);

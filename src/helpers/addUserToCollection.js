@@ -9,9 +9,7 @@ export const addUserToCollection = async user => {
     emailVerified: user.emailVerified,
     authProvider: "local",
     userCreated: serverTimestamp(),
-  })
-    .then(() => console.log("ADDED TO DATABASE"))
-    .catch(err => {
-      throw new Error(err);
-    });
+  }).catch(err => {
+    throw new Error(err);
+  });
 };

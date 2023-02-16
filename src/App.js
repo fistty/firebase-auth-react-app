@@ -15,6 +15,7 @@ import "./App.css";
 
 const App = () => {
   const [showSignInMessage, setShowSignInMessage] = useState(false);
+  const [showEmail, setShowEmail] = useState(false);
   const { loading } = useUserAuth();
 
   return (
@@ -32,12 +33,19 @@ const App = () => {
         <Route
           index
           path={ROUTES.SIGN_UP}
-          element={<SignUp setMessage={setShowSignInMessage} />}
+          element={
+            <SignUp
+              setMessage={setShowSignInMessage}
+              setShowEmail={setShowEmail}
+            />
+          }
         />
         <Route path={ROUTES.PAGE_NOT_FOUND} element={<PageNotFound />} />
         <Route
           path={ROUTES.SIGN_IN}
-          element={<SignIn setMessage={setShowSignInMessage} />}
+          element={
+            <SignIn setMessage={setShowSignInMessage} showEmail={showEmail} />
+          }
         />
         <Route path={ROUTES.FORGOT_PASSWORD} element={<ForgotPassword />} />
         <Route

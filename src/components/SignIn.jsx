@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { IconContext } from "react-icons";
 import { BiHide, BiShowAlt } from "react-icons/bi";
 import { useNavigate } from "react-router-dom";
@@ -9,7 +9,7 @@ import * as ROUTES from "../routes/routes";
 import "./SignIn.css";
 import { formatError } from "../helpers/formatError";
 
-export function SignIn({ setMessage }) {
+export function SignIn({ setMessage, showEmail }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [passwordShow, setPasswordShow] = useState(false);
@@ -17,6 +17,7 @@ export function SignIn({ setMessage }) {
   const { logInUser, setLoading, firebaseError, setFirebaseError } =
     useUserAuth();
   const navigate = useNavigate();
+  const emailRef = useRef();
 
   const handleShowPassword = e => {
     e.preventDefault();
@@ -40,6 +41,11 @@ export function SignIn({ setMessage }) {
   };
 
   useEffect(() => {
+    setLoading(true);
+    if (showEmail) {
+      emailRef.current.value = showEmail;
+      setLoading(false);
+    }
     setLoading(false);
     setTimeout(() => {
       setMessage(false);
@@ -47,7 +53,7 @@ export function SignIn({ setMessage }) {
     return () => {
       setFirebaseError(false);
     };
-  }, [setLoading, setFirebaseError, setMessage]);
+  }, [setLoading, setFirebaseError, setMessage, showEmail]);
 
   return (
     <div className="sign-in-div">
@@ -60,6 +66,7 @@ export function SignIn({ setMessage }) {
             placeholder="Enter your Email"
             value={email}
             onChange={e => setEmail(e.target.value)}
+            ref={emailRef}
           />
         </div>
         <div className="pass-div sign-in-pass-div">
