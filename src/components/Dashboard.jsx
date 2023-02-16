@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { useUserAuth } from "../context/userAuthContext";
 import { formatError } from "../helpers/formatError";
+import * as ROUTES from "../routes/routes";
 import "./Dashboard.css";
 
 export const Dashboard = ({ setMessage }) => {
@@ -13,7 +14,7 @@ export const Dashboard = ({ setMessage }) => {
   const handleSignOut = async () => {
     try {
       await logOutUser();
-      navigate("/signin", { replace: true });
+      navigate(ROUTES.SIGN_IN, { replace: true });
     } catch (error) {
       setFirebaseError(formatError(error.code));
     }
@@ -34,14 +35,14 @@ export const Dashboard = ({ setMessage }) => {
         <h2>{currentUser.email}</h2>
         <Link
           className="update-profile update-profile-email"
-          to="/update-email"
+          to={ROUTES.UPDATE_EMAIL}
         >
           Update Email
         </Link>
 
         <Link
           className="update-profile update-profile-password "
-          to="/update-password"
+          to={ROUTES.UPDATE_PASSWORD}
         >
           Change Password
         </Link>
