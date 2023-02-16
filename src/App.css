@@ -116,6 +116,20 @@ html {
   animation: jump-shaking 1s ease-out infinite;
 }
 
+.warning {
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  width: max-content;
+  padding-inline: 15px;
+  border-radius: 10px;
+  color: white;
+  background-color: red;
+  font-size: 16px;
+  text-align: center;
+  font-weight: 600;
+  font-family: var(--font);
+}
+
 @keyframes moveIn {
   0% {
     transform: translateY(0px);
