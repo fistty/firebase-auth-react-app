@@ -119,16 +119,20 @@ html {
 .warning {
   margin: 0 auto;
   margin-bottom: 1rem;
-  margin-inline: 15px;
   max-width: 380px;
+  width: calc(100% - 30px);
   padding-inline: 15px;
   border-radius: 10px;
   color: white;
   background-color: red;
-  font-size: 16px;
+
   text-align: center;
   font-weight: 600;
   font-family: var(--font);
+}
+
+.warning * {
+  font-size: 16px;
 }
 
 @keyframes moveIn {
