@@ -159,7 +159,7 @@ export function SignUp({ setMessage }) {
       <div className="adds">
         <p className="adds-first">
           Already have an account?
-          <Link className="sign-in-link" to="/signIn">
+          <Link className="sign-in-link" to={ROUTES.SIGN_IN}>
             Sign In
           </Link>
         </p>
