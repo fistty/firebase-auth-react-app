@@ -83,6 +83,5 @@
 .dashboard {
   width: calc(100% - 10px);
   max-width: 400px;
-  /* min-width: 380px; */
   margin: 0 auto;
 }
