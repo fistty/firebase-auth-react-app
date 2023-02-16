@@ -30,11 +30,7 @@ const App = () => {
           path={ROUTES.SIGN_UP}
           element={<SignUp setMessage={setShowSignInMessage} />}
         />
-        <Route
-          pasth="*"
-          path={ROUTES.PAGE_NOT_FOUND}
-          element={<PageNotFound />}
-        />
+        <Route path={ROUTES.PAGE_NOT_FOUND} element={<PageNotFound />} />
         <Route
           path={ROUTES.SIGN_IN}
           element={<SignIn setMessage={setShowSignInMessage} />}
