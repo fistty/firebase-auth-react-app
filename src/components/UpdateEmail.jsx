@@ -86,7 +86,9 @@ export const UpdateEmail = () => {
   };
 
   const handleCancel = () => {
-    navigate(-1);
+    setTimeout(() => {
+      navigate(-1);
+    }, 295);
   };
 
   useEffect(() => {

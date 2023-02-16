@@ -14,7 +14,9 @@ export const Dashboard = ({ setMessage }) => {
   const handleSignOut = async () => {
     try {
       await logOutUser();
-      navigate(ROUTES.SIGN_IN, { replace: true });
+      setTimeout(() => {
+        navigate(ROUTES.SIGN_IN, { replace: true });
+      }, 295);
     } catch (error) {
       setFirebaseError(formatError(error.code));
     }

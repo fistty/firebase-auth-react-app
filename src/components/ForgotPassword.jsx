@@ -35,9 +35,11 @@ export const ForgotPassword = () => {
     setLoading(false);
   };
 
-  const handleCancel = e => {
+  const handleCancel = async e => {
     e.preventDefault();
-    navigate(-1);
+    setTimeout(() => {
+      navigate(-1);
+    }, 295);
   };
 
   useEffect(() => {

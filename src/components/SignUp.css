@@ -1,6 +1,7 @@
 .h1 {
   margin-bottom: 1rem;
   text-align: center;
+  padding-inline: 5px;
 }
 
 .email-div,
