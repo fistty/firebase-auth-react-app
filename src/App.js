@@ -24,6 +24,7 @@ const App = () => {
       {showSignInMessage && (
         <p className="message">Log in with your credentials</p>
       )}
+      <h1 className="warning">PLEASE DON'T USE YOUR REAL CREDENTIALS</h1>
       <Routes>
         <Route
           index
