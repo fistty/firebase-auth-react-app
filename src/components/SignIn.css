@@ -65,7 +65,7 @@
 
 .sign-in-button {
   display: block;
-  width: 60%;
+  width: 100%;
   max-width: var(--width);
   height: var(--height);
   font-family: var(--font);
