@@ -10,7 +10,11 @@
   font-size: 2.8rem;
 }
 
-.not-found a {
+.not-found p {
   text-align: center;
   font-family: var(--font);
+  font-size: 20px;
+  text-decoration: underline;
+  color: blue;
+  cursor: pointer;
 }
