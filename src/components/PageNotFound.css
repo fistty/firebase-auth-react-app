@@ -9,3 +9,8 @@
 .not-found h2 {
   font-size: 2.8rem;
 }
+
+.not-found a {
+  text-align: center;
+  font-family: var(--font);
+}
