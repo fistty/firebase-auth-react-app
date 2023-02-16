@@ -47,7 +47,7 @@ export function SignIn({ setMessage }) {
     return () => {
       setFirebaseError(false);
     };
-  }, []);
+  }, [setLoading, setFirebaseError, setMessage]);
 
   return (
     <div className="sign-in-div">

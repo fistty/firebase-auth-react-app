@@ -43,7 +43,7 @@ export const ForgotPassword = () => {
   useEffect(() => {
     setFirebaseError(false);
     setFirebaseSuccess(false);
-  }, []);
+  }, [setFirebaseError, setFirebaseSuccess]);
   return (
     <div className="forgot-password-div">
       <h1 className="h1">RESET YOUR PASSWORD</h1>

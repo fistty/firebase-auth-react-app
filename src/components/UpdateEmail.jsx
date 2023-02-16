@@ -94,11 +94,7 @@ export const UpdateEmail = () => {
     if (currentUser?.email) {
       setLoading(false);
     }
-    return () => {
-      setFirebaseSuccess(false);
-      setFirebaseError(false);
-    };
-  }, [currentUser?.email]);
+  }, [currentUser?.email, setLoading]);
 
   useEffect(() => {
     setFirebaseSuccess(false);
@@ -107,7 +103,7 @@ export const UpdateEmail = () => {
       setFirebaseSuccess(false);
       setFirebaseError(false);
     };
-  }, []);
+  }, [setFirebaseError, setFirebaseSuccess]);
 
   return (
     <div className="update-profile-div">

@@ -124,7 +124,7 @@ export const UpdatePassword = () => {
     if (currentUser?.email) {
       setLoading(false);
     }
-  }, [formError, currentUser?.email]);
+  }, [formError, currentUser?.email, setLoading]);
 
   useEffect(() => {
     setFirebaseError(false);
@@ -133,7 +133,7 @@ export const UpdatePassword = () => {
       setFirebaseSuccess(false);
       setFirebaseError(false);
     };
-  }, []);
+  }, [setFirebaseError, setFirebaseSuccess]);
 
   return (
     <div className="update-password-div">

@@ -86,7 +86,7 @@ export function SignUp({ setMessage }) {
     return () => {
       setFirebaseError(false);
     };
-  }, []);
+  }, [setMessage, setFirebaseError]);
 
   return (
     <>

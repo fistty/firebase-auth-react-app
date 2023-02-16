@@ -15,7 +15,6 @@ export const validatePassword = async (password, signin) => {
     } else {
       return true;
     }
-    return;
   }
   if (!signin) {
     if (/.{6,}/.test(password)) {

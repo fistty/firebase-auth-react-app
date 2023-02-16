@@ -25,7 +25,7 @@ export const Dashboard = ({ setMessage }) => {
       setLoading(false);
     }
     setMessage(false);
-  }, [currentUser?.email]);
+  }, [currentUser?.email, setMessage, setLoading]);
 
   return (
     <>
