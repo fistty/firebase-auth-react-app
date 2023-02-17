@@ -9,6 +9,7 @@ import { formatError } from "../helpers/formatError";
 import { FirebaseErrorComponent } from "./FirebaseErrorComponent";
 import { FirebaseSuccessComponent } from "./FirebaseSuccessComponent";
 import "./updateEmail.css";
+import { updateUserInCollection } from "../helpers/collectionHelpers";
 
 export const UpdateEmail = () => {
   const [email, setEmail] = useState("");
@@ -74,9 +75,10 @@ export const UpdateEmail = () => {
     // UPDATES THE USER
     try {
       await updateUserEmail(email);
+      await updateUserInCollection(oldEmail, email);
       headerRef.current.innerText = email;
-      setLoading(false);
       setFirebaseSuccess("EMAIL UPDATED");
+      setLoading(false);
     } catch (error) {
       setLoading(false);
       setFirebaseError(formatError(error.code));
