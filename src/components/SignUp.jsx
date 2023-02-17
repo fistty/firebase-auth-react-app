@@ -4,7 +4,7 @@ import { IconContext } from "react-icons";
 import { BiHide, BiShowAlt } from "react-icons/bi";
 import { Link, useNavigate } from "react-router-dom";
 import { useUserAuth } from "../context/userAuthContext";
-import { addUserToCollection } from "../helpers/addUserToCollection";
+import { addUserToCollection } from "../helpers/collectionHelpers";
 import { validateCredentials } from "../helpers/ValidateCredentials.js";
 import * as ROUTES from "../routes/routes";
 import "./SignUp.css";
@@ -118,12 +118,12 @@ export function SignUp({ setMessage, setShowEmail }) {
 
           {password.length > 0 ? (
             <IconContext.Provider value={{ size: "1.3rem" }}>
-              <button
+              <span
                 className="show-icon-button"
                 onClick={togglePasswordVisibility}
               >
                 {passwordShow === true ? <BiHide /> : <BiShowAlt />}
-              </button>
+              </span>
             </IconContext.Provider>
           ) : null}
           {passwordError && <p className="email-div-error">{passwordError}</p>}
@@ -144,12 +144,12 @@ export function SignUp({ setMessage, setShowEmail }) {
 
           {confirmPassword.length > 0 && (
             <IconContext.Provider value={{ size: "1.3rem" }}>
-              <button
+              <span
                 className="show-icon-button"
                 onClick={togglePasswordVisibility}
               >
                 {passwordShow === true ? <BiHide /> : <BiShowAlt />}
-              </button>
+              </span>
             </IconContext.Provider>
           )}
           {confirmPasswordError && (
