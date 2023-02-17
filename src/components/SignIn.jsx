@@ -43,13 +43,13 @@ export function SignIn({ setMessage, showEmail }) {
   useEffect(() => {
     setLoading(true);
     if (showEmail) {
-      emailRef.current.value = showEmail;
+      setEmail(showEmail);
       setLoading(false);
     }
     setLoading(false);
     setTimeout(() => {
       setMessage(false);
-    }, 10000);
+    }, 15000);
     return () => {
       setFirebaseError(false);
     };
