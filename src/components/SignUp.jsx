@@ -156,12 +156,12 @@ export function SignUp({ setMessage, setShowEmail }) {
             <p className="email-div-error">{confirmPasswordError}</p>
           )}
         </div>
-        <button className="sign-up-button">Sign Up</button>
+        <button className="sign-in-button">Sign Up</button>
       </form>
       <div className="adds">
         <p className="adds-first">
           Already have an account?
-          <Link className="sign-in-link" to={ROUTES.SIGN_IN}>
+          <Link className="sign-in-link adds-sign" to={ROUTES.SIGN_IN}>
             Sign In
           </Link>
         </p>

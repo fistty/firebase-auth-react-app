@@ -8,8 +8,8 @@ import { EmailAuthProvider } from "firebase/auth";
 import { formatError } from "../helpers/formatError";
 import { FirebaseErrorComponent } from "./FirebaseErrorComponent";
 import { FirebaseSuccessComponent } from "./FirebaseSuccessComponent";
-import "./updateEmail.css";
 import { updateUserInCollection } from "../helpers/collectionHelpers";
+import "./updateEmail.css";
 
 export const UpdateEmail = () => {
   const [email, setEmail] = useState("");
@@ -145,7 +145,7 @@ export const UpdateEmail = () => {
             </IconContext.Provider>
           ) : null}
         </div>
-        <button className="update-button">Update</button>
+        <button className="sign-in-button">Update</button>
       </form>
       <div className="adds">
         <button className="cancel-button" onClick={handleCancel}>

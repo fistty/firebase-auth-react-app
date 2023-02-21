@@ -10,7 +10,7 @@
   font-size: 28px;
   font-weight: 600;
   text-align: center;
-  background-color: blue;
+  background-color: #9f02d8;
   border-radius: 10px;
 }
 
@@ -39,23 +39,22 @@
   margin-bottom: 1rem;
   border-radius: 10px;
   border: 1px solid transparent;
-  color: blue;
+  color: #9f02d8;
   cursor: pointer;
   border: 1px solid transparent;
   transition: all 200ms ease-in-out;
 }
 
 .dashboard .update-profile:hover {
-  border: 1px solid blue;
   background-color: transparent;
-  color: blue;
+  color: #b000f0;
 }
 
 .dashboard .update-profile-password {
   margin-top: 1.2rem;
 }
 
-.dashboard .logout {
+.dashboard .cancel-button {
   display: block;
   width: 120px;
   max-width: var(--width);
@@ -64,20 +63,12 @@
   font-weight: 700;
   font-size: 18px;
   margin: 0 auto;
-  margin-top: 2rem;
+  margin-top: 1rem;
   margin-bottom: 1rem;
-  background-color: transparent;
   border-radius: 50px;
-  border: unset;
-  color: red;
+  border: 2px soldi transparent;
   cursor: pointer;
   transition: all 200ms ease-in-out;
-}
-
-.dashboard .logout:hover {
-  width: 200px;
-  background-color: red;
-  color: white;
 }
 
 .dashboard {

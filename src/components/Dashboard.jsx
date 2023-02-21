@@ -49,7 +49,7 @@ export const Dashboard = ({ setMessage }) => {
           Change Password
         </Link>
         <hr />
-        <button className="logout" onClick={handleSignOut}>
+        <button className="cancel-button" onClick={handleSignOut}>
           LOGOUT
         </button>
       </div>

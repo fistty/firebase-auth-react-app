@@ -6,8 +6,8 @@ import { useUserAuth } from "../context/userAuthContext";
 import { Link } from "react-router-dom";
 import { FirebaseErrorComponent } from "./FirebaseErrorComponent";
 import * as ROUTES from "../routes/routes";
-import "./SignIn.css";
 import { formatError } from "../helpers/formatError";
+import "./SignIn.css";
 
 export function SignIn({ setMessage, showEmail }) {
   const [email, setEmail] = useState("");
@@ -91,13 +91,13 @@ export function SignIn({ setMessage, showEmail }) {
         <p className="signin__adds-first">
           Don't have an account?
           <button className="signin__adds-first-button">
-            <Link className="signin__adds_first-link" to={ROUTES.SIGN_UP}>
+            <Link className="signin__adds_first-link adds-sign" to={ROUTES.SIGN_UP}>
               Sign Up
             </Link>
           </button>
         </p>
         <Link className="sign-in__adds-second" to={ROUTES.FORGOT_PASSWORD}>
-          Forgot Password
+          Forgot Password?
         </Link>
       </div>
     </div>

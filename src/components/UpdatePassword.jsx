@@ -224,7 +224,7 @@ export const UpdatePassword = () => {
             )}
           </div>
         </div>
-        <button className="update-button">Confirm</button>
+        <button className="sign-in-button">Confirm</button>
       </form>
       <div className="adds">
         <button className="cancel-button" onClick={handleCancel}>

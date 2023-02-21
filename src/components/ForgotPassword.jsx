@@ -62,7 +62,7 @@ export const ForgotPassword = () => {
             }}
           />
         </div>
-        <button className="reset-password-button">RESET</button>
+        <button className="sign-in-button">RESET</button>
       </form>
       <div className="adds">
         <button className="cancel-button" onClick={handleCancel}>
