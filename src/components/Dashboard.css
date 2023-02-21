@@ -10,7 +10,7 @@
   font-size: 28px;
   font-weight: 600;
   text-align: center;
-  background-color: #9f02d8;
+  background-color: var(--purple);
   border-radius: 10px;
 }
 
@@ -39,7 +39,7 @@
   margin-bottom: 1rem;
   border-radius: 10px;
   border: 1px solid transparent;
-  color: #9f02d8;
+  color: var(--purple);
   cursor: pointer;
   border: 1px solid transparent;
   transition: all 200ms ease-in-out;
@@ -47,7 +47,7 @@
 
 .dashboard .update-profile:hover {
   background-color: transparent;
-  color: #b000f0;
+  color: var(--purple-hover);
 }
 
 .dashboard .update-profile-password {
