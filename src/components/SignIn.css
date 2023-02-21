@@ -1,7 +1,7 @@
 .sign-in__adds-second {
   margin-top: 1rem;
   text-decoration: none;
-  color: #490064;
+  color: var(--purple);
   font-size: 18px;
   background-color: transparent;
   cursor: pointer;
@@ -13,7 +13,7 @@
 }
 
 .sign-in__adds-second:hover {
-  color: #7600a1;
+  color: var(--purple-hover);
 }
 
 .sign-in-email-div > input,
@@ -72,7 +72,7 @@
   font-weight: 700;
   font-size: 18px;
   margin: 0 auto;
-  background-color: #9f02d8;
+  background-color: var(--purple);
   border-radius: 50px;
   border: unset;
   color: white;
@@ -107,5 +107,9 @@
 }
 
 .adds-sign {
-  color: #9f02d8 !important
+  color: var(--purple) !important;
+}
+
+.adds-sign:hover {
+  color: var(--purple-hover) !important;
 }
