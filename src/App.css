@@ -19,7 +19,8 @@
   --width: 300px;
   --height: 40px;
   --back: #f2f2f2;
-  -color: #7700ff;
+  --purple: #9139c1;
+  --purple-hover: #ac00eb;
 }
 
 html {
