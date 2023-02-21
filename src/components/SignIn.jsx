@@ -88,17 +88,20 @@ export function SignIn({ setMessage, showEmail }) {
         <button className="sign-in-button">Sign In</button>
       </form>
       <div className="adds">
+        <Link className="sign-in__adds-second" to={ROUTES.FORGOT_PASSWORD}>
+          Forgot Password?
+        </Link>
         <p className="signin__adds-first">
           Don't have an account?
           <button className="signin__adds-first-button">
-            <Link className="signin__adds_first-link adds-sign" to={ROUTES.SIGN_UP}>
+            <Link
+              className="signin__adds_first-link adds-sign"
+              to={ROUTES.SIGN_UP}
+            >
               Sign Up
             </Link>
           </button>
         </p>
-        <Link className="sign-in__adds-second" to={ROUTES.FORGOT_PASSWORD}>
-          Forgot Password?
-        </Link>
       </div>
     </div>
   );
