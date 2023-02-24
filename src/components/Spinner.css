@@ -5,8 +5,9 @@
   border-radius: 50%;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(0.5);
+  transform: translate(-50%, -50%) scale(0.3);
   background-color: red;
+
 }
 
 /* FOR THE SPINNER */
