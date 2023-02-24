@@ -81,7 +81,7 @@
 }
 
 .sign-in-button:hover {
-  background-color: #ac00eb;
+  background-color: var(--purple-hover);
 }
 
 .sign-in-div .show-icon-button {
