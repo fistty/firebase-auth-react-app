@@ -7,6 +7,7 @@ import { useUserAuth } from "../context/userAuthContext";
 import { addUserToCollection } from "../helpers/collectionHelpers";
 import { validateCredentials } from "../helpers/ValidateCredentials.js";
 import * as ROUTES from "../routes/routes";
+import { formatError } from "../helpers/formatError";
 import "./SignUp.css";
 
 export function SignUp({ setMessage, setShowEmail }) {
@@ -66,18 +67,16 @@ export function SignUp({ setMessage, setShowEmail }) {
 
       // SAVES USER'S DATA TO DATABASE
       await addUserToCollection(user).catch(error => {
-        console.log(error);
-        throw new Error("ERROR at DATABASE");
+        // console.log(error);
+        throw new Error("ERROR at DATABASE CREATION");
       });
-      console.log("USER SUCCESFULLY CREATED");
+      // console.log("USER SUCCESFULLY CREATED");
       setMessage(true);
       setShowEmail(user.email);
       navigate(ROUTES.SIGN_IN);
       setLoading(false);
     } catch (error) {
-      console.log({ error });
-      setFirebaseError(error.code);
-      console.log(error.code, "=>=>", error.message);
+      setFirebaseError(formatError(error.code));
     }
     setLoading(false);
   };
