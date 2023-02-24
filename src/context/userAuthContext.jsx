@@ -16,7 +16,7 @@ export const userAuthContext = createContext();
 
 export const UserAuthContextProvider = ({ children }) => {
   const [currentUser, setCurrentUser] = useState({});
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [firebaseError, setFirebaseError] = useState(false);
   const [firebaseSuccess, setFirebaseSuccess] = useState(false);
 
