@@ -14,67 +14,64 @@ import { Spinner } from "./components/Spinner";
 import "./App.css";
 
 const App = () => {
-  const [showSignInMessage, setShowSignInMessage] = useState(false);
-  const [showEmail, setShowEmail] = useState(false);
-  const { loading } = useUserAuth();
+	const [showSignInMessage, setShowSignInMessage] = useState(false);
+	const [showEmail, setShowEmail] = useState(false);
+	const { loading } = useUserAuth();
 
-  return (
-    <div className="app">
-      {loading && <div className="overflow"></div>}
-      {loading && <Spinner />}
-      {showSignInMessage && (
-        <p className="message">Log in with your credentials</p>
-      )}
-      <div className="warning">
-        <h1>PLEASE DON'T USE YOUR REAL CREDENTIALS</h1>
-      </div>
+	return (
+		<div className="app">
+			{loading && <div className="overflow"></div>}
+			{loading && <Spinner />}
+			{showSignInMessage && (
+				<p className="message">Log in with your credentials</p>
+			)}
+			<div className="warning">
+				<h1>PLEASE DO NOT USE YOUR REAL CREDENTIALS</h1>
+			</div>
 
-      <Routes>
-        <Route
-          index
-          path={ROUTES.SIGN_UP}
-          element={
-            <SignUp
-              setMessage={setShowSignInMessage}
-              setShowEmail={setShowEmail}
-            />
-          }
-        />
-        <Route path={ROUTES.PAGE_NOT_FOUND} element={<PageNotFound />} />
-        <Route
-          path={ROUTES.SIGN_IN}
-          element={
-            <SignIn setMessage={setShowSignInMessage} showEmail={showEmail} />
-          }
-        />
-        <Route path={ROUTES.FORGOT_PASSWORD} element={<ForgotPassword />} />
-        <Route
-          path={ROUTES.DASHBOARD}
-          element={
-            <ProtectedRoute>
-              <Dashboard setMessage={setShowSignInMessage} />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path={ROUTES.UPDATE_EMAIL}
-          element={
-            <ProtectedRoute>
-              <UpdateEmail />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path={ROUTES.UPDATE_PASSWORD}
-          element={
-            <ProtectedRoute>
-              <UpdatePassword />
-            </ProtectedRoute>
-          }
-        />
-      </Routes>
-    </div>
-  );
+			<Routes>
+				<Route
+					index
+					path={ROUTES.SIGN_UP}
+					element={
+						<SignUp setMessage={setShowSignInMessage} setShowEmail={setShowEmail} />
+					}
+				/>
+				<Route path={ROUTES.PAGE_NOT_FOUND} element={<PageNotFound />} />
+				<Route
+					path={ROUTES.SIGN_IN}
+					element={
+						<SignIn setMessage={setShowSignInMessage} showEmail={showEmail} />
+					}
+				/>
+				<Route path={ROUTES.FORGOT_PASSWORD} element={<ForgotPassword />} />
+				<Route
+					path={ROUTES.DASHBOARD}
+					element={
+						<ProtectedRoute>
+							<Dashboard setMessage={setShowSignInMessage} />
+						</ProtectedRoute>
+					}
+				/>
+				<Route
+					path={ROUTES.UPDATE_EMAIL}
+					element={
+						<ProtectedRoute>
+							<UpdateEmail />
+						</ProtectedRoute>
+					}
+				/>
+				<Route
+					path={ROUTES.UPDATE_PASSWORD}
+					element={
+						<ProtectedRoute>
+							<UpdatePassword />
+						</ProtectedRoute>
+					}
+				/>
+			</Routes>
+		</div>
+	);
 };
 
 export default App;
