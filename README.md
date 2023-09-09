@@ -9,3 +9,5 @@ A dynamic web application that utilizes Google's Firebase social authentication 
 ### Screenshot
 
 ![](./Screenshot.png)
+
+I am open to suggestions and review.
