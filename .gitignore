@@ -2,7 +2,6 @@
 
 # dependencies
 /node_modules
-/COPY
 /.pnp
 .env
 .pnp.js
@@ -16,6 +15,7 @@
 # misc
 .DS_Store
 .gitignore
+.gitattributes
 .env.local
 .env.development.local
 .env.test.local
